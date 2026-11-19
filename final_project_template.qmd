@@ -32,6 +32,22 @@ This problem sits at the intersection of radiology, medical physics, and data sc
 
 Describe the data used and general methodological approach used to address the problem described in the @sec-introduction. Subsequently, incorporate full R code necessary to retrieve and clean data, and perform analysis. Be sure to include a description of code so that others (including your future self) can understand what you are doing and why.
 
+This data set is from the Department of Radiology, looking at the radiation dose required to perform CT scans for participants.
+
+The data-set is anonymized and consists of demographic information such as age and sex, health-related information such as height, weight, and BMI as well as other data that will be interesting to study alongside these features.
+
+The CT scans in the data set are specifically those performed in the abdomen and pelvic area and we will be comparing scans with or without IV contrast, scans across different manufacturers and look at how these factors correlate with demographic and health related data to show trends in radiation dose.
+
+To do this, we will first need to load the data set and look at the different variables available and clean it as necessary.
+
+```{r}
+install.packages("readxl")
+library(readxl)
+
+CTdose_df <- read_excel("Demo_data.xlsx")
+CTdose_df
+```
+
 ## Results {#sec-results}
 
 Describe your results and include relevant tables, plots, and code/comments used to obtain them. You may refer to the @sec-methods as needed. End with a brief conclusion of your findings related to the question you set out to address. You can include references if you'd like, but this is not required.
