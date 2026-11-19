@@ -1,7 +1,7 @@
 ---
-title: "Your Title"
+title: "Radiation Dose in Photon-Counting vs Conventional CT"
 subtitle: "BMIN5030 Final Project"
-author: "FirstName LastName"
+author: "Kaviya Muralidharan"
 format: html
 editor: visual
 number-sections: true
@@ -16,11 +16,17 @@ Use this template to complete your project throughout the course. Your Final Pro
 
 Give a brief a description of your project and its goal(s), what data you are using to complete it, and what two faculty/staff in different fields you have spoken to about your project with a brief summary of what you learned from each person. Include a link to your final project GitHub repository.
 
+This project compares radiation dose between photon-counting CT (PCCT) and conventional energy-integrating detector CT (EID-CT) at Penn Medicine, and examines how patient characteristics such as BMI, sex, and age relate to dose. Using de-identified CT dose records, I will describe dose differences across scanner types and model how scanner technology and patient factors together predict dose.
+
 ## Introduction {#sec-introduction}
 
 Describe the problem addressed, its significance, and some background to motivate the problem. This should extend what is in the @sec-overview.
 
 Explain why your problem is interdisciplinary, what fields can contribute to its understanding, and incorporate background related to what you learned from meeting with faculty/staff.
+
+CT is one of the most widely used diagnostic imaging tools, but it exposes patients to ionizing radiation, and keeping dose as low as reasonably achievable is a central goal in radiology. Dose is especially hard to manage in patients with obesity, because larger body size requires more radiation to produce a usable image. Photon-counting CT is a newer detector technology that counts individual X-ray photons rather than integrating their total energy, which may allow good image quality at lower dose. As PCCT enters clinical use, it is important to understand whether it actually lowers dose in practice and whether any benefit holds across patients of different body sizes and demographics.\
+
+This problem sits at the intersection of radiology, medical physics, and data science. Radiology defines which exams and protocols are clinically meaningful, medical physics explains how detector technology and patient size affect dose, and data science provides the tools to analyze large volumes of routinely collected dose records. I met with Dr. Ali Dhanaliwala in the Department of Radiology, whose research compares PCCT and EID-CT, including in patients with obesity and for lung cancer screening. Based on that conversation, I chose to use real-world dose data to compare the two technologies and to explore how BMI and other patient factors relate to dose.
 
 ## Methods {#sec-methods}
 
